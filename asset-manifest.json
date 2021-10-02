@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/andculture_assessment/static/css/main.c5fa6883.chunk.css",
+    "main.js": "/andculture_assessment/static/js/main.57f296c3.chunk.js",
+    "main.js.map": "/andculture_assessment/static/js/main.57f296c3.chunk.js.map",
+    "runtime-main.js": "/andculture_assessment/static/js/runtime-main.aa0615b8.js",
+    "runtime-main.js.map": "/andculture_assessment/static/js/runtime-main.aa0615b8.js.map",
+    "static/js/2.57804507.chunk.js": "/andculture_assessment/static/js/2.57804507.chunk.js",
+    "static/js/2.57804507.chunk.js.map": "/andculture_assessment/static/js/2.57804507.chunk.js.map",
+    "static/js/3.f651120c.chunk.js": "/andculture_assessment/static/js/3.f651120c.chunk.js",
+    "static/js/3.f651120c.chunk.js.map": "/andculture_assessment/static/js/3.f651120c.chunk.js.map",
+    "index.html": "/andculture_assessment/index.html",
+    "static/css/main.c5fa6883.chunk.css.map": "/andculture_assessment/static/css/main.c5fa6883.chunk.css.map",
+    "static/js/2.57804507.chunk.js.LICENSE.txt": "/andculture_assessment/static/js/2.57804507.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aa0615b8.js",
+    "static/js/2.57804507.chunk.js",
+    "static/css/main.c5fa6883.chunk.css",
+    "static/js/main.57f296c3.chunk.js"
+  ]
+}

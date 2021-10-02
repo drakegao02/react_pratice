@@ -26,8 +26,7 @@ const BrewerCard = (props) => {
     const BrewerDetailComponentLink = React.forwardRef((props, ref) => <Link to={{pathname: `/home/${type}`, state: data }} {...props} ref={ref} />);
 
     const getDetails = () => {
-        let t = type;
-        props.getDetails(t);
+        props.getDetails(type);
     }
 
     return (

@@ -4,7 +4,11 @@ import config from './config';
 
 const useBreweries = () => {
     const [isLoading, setIsLoading] = useState(true);
+<<<<<<< HEAD
     const [city, setCity] = useState();
+=======
+    const [city, setCity] = useState(props);
+>>>>>>> dff299d2c9c7e966c9557c45103b9f7f688a4485
     const [data, setData] = useState([]);
 
     const onChange = (city) => {

@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 import userBreweries from './brewerhook';
 import BrewerCard from './BrewerCard';
 import {
@@ -11,14 +11,15 @@ const cardSize = {
     display: 'flex',
     flexWrap: 'wrap',
     flexDirection: 'row',
-    justifyContent: 'center'
+    justifyContent: 'center',
 }
 
 const divContainer = {
     display: 'flex',
     justifyContent: 'center',
-    flex: '0 0 100%',
-    margin: '10px'
+    margin: '10px',
+    flexDirection: 'row'
+
 }
 
 const textInput = {
@@ -32,14 +33,16 @@ const btn = {
 }
 
 const Home = () => {
-    const [isLoading, breweries, onChange] = userBreweries();
+    const previousCity = localStorage.getItem('city');
+    const [isLoading, breweries, onChange] = userBreweries(previousCity);
     const [type, setType] = useState('');
     const [city, setCity] = useState('');
-
     const getDetails = (data) => {
         setType(data);
     }
+
     const getData = (city) => {
+        localStorage.setItem('city', city);
         onChange(city);
     }
 
@@ -50,9 +53,6 @@ const Home = () => {
     const displayItem = () => {
         {
             return (
-                (isLoading) ? 
-                <div></div>
-                : 
                 breweries.map((d, index) => {
                     return (
                         <BrewerCard
@@ -67,7 +67,7 @@ const Home = () => {
     }
 
     return(
-        <section style={cardSize}>
+        <section>
             <Container style={divContainer}>
                 <TextField
                     style={textInput}
@@ -80,7 +80,9 @@ const Home = () => {
                 <Button style={btn} variant="contained" onClick={() => getData(city)}>GetData</Button>
             </Container>
             
-            { displayItem() }
+            <div style={cardSize}>
+                { displayItem() }
+            </div>
             
         </section>
     );

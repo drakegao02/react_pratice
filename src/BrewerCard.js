@@ -26,8 +26,13 @@ const BrewerCard = (props) => {
     const BrewerDetailComponentLink = React.forwardRef((props, ref) => <Link to={{pathname: `/home/${type}`, state: data }} {...props} ref={ref} />);
 
     const getDetails = () => {
+        setData(props.brewer);
         props.getDetails(type);
     }
+
+    React.useEffect(() => {
+       setData(props.brewer);
+    }, [props]);
 
     return (
         <Card style={cardSize}>
